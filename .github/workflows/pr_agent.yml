@@ -23,13 +23,16 @@ jobs:
           # api.openai.com и даёт 401 «Incorrect API key» для ключей вида gsk_...
           CONFIG.FALLBACK_MODELS: '["groq/llama-3.1-8b-instant"]'
           
-          # Ключи доступа
+          # Ключи доступа (оба имени: pr-agent и LiteLLM читают по-разному)
           GROQ.API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB.PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
           
-          # Настройки поведения
-          PR_AGENT.LANGUAGE: "Russian"
+          # Язык ответов LLM: ISO locale ru-RU (см. https://pr-agent-docs.codium.ai/usage-guide/additional_configurations/ ).
+          # Ограничения: по доке PR Agent на ru идёт преимущественно текст, сгенерированный моделью; шаблонные заголовки
+          # и часть подписей в markdown-комментариях GitHub могут остаться на английском. PR_AGENT.LANGUAGE это не задаёт.
+          CONFIG.RESPONSE_LANGUAGE: "ru-RU"
           PR_DESCRIPTION.PUBLISH_DESCRIPTION_AS_COMMENT: true
           PR_AGENT.PR_ACTIONS: "review,describe"
