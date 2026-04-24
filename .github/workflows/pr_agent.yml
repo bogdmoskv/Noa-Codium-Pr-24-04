@@ -1,0 +1,25 @@
+name: PR Agent Review
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize] # Запуск при открытии или обновлении PR
+  issue_comment:
+    create: true # Позволяет писать команды в комментариях
+
+jobs:
+  pr_agent_job:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Run PR Agent
+        uses: Codium-ai/pr-agent@main
+        env:
+          CONFIG.GIT_PROVIDER: github
+          CONFIG.MODEL: "groq/llama-3.3-70b-versatile" 
+          GROQ.API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GITHUB.PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
+          PR_AGENT.LANGUAGE: "Russian" 
+          PR_DESCRIPTION.PUBLISH_DESCRIPTION_AS_COMMENT: true
