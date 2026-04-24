@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [opened, reopened, synchronize]
   issue_comment:
-    create: true
+    types: [created]
 
 jobs:
   pr_agent_job:
@@ -19,10 +19,12 @@ jobs:
         env:
           CONFIG.GIT_PROVIDER: github
           CONFIG.MODEL: "groq/llama-3.3-70b-versatile"
+          # Только Groq: не подставлять GROQ-ключ в OPENAI_KEY — иначе fallback (o4-mini) идёт на
+          # api.openai.com и даёт 401 «Incorrect API key» для ключей вида gsk_...
+          CONFIG.FALLBACK_MODELS: '["groq/llama-3.1-8b-instant"]'
           
           # Ключи доступа
           GROQ.API_KEY: ${{ secrets.GROQ_API_KEY }}
-          OPENAI_KEY: ${{ secrets.GROQ_API_KEY }} 
           
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB.PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
