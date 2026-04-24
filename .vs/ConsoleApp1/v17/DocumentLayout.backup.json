@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u0423\u0447\u0435\u043D\u0438\u043A\u0438_\u0434\u0435\u043A\u0430\u0431\u0440\u044C 2025\\Noa 2025\\Codium_test_2404\\ConsoleApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C31D0CFA-62FC-429C-B1ED-470B1E8ED841}|ConsoleApp1\\ConsoleApp1.csproj|d:\\\u0443\u0447\u0435\u043D\u0438\u043A\u0438_\u0434\u0435\u043A\u0430\u0431\u0440\u044C 2025\\noa 2025\\codium_test_2404\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C31D0CFA-62FC-429C-B1ED-470B1E8ED841}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u0423\u0447\u0435\u043D\u0438\u043A\u0438_\u0434\u0435\u043A\u0430\u0431\u0440\u044C 2025\\Noa 2025\\Codium_test_2404\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "D:\\\u0423\u0447\u0435\u043D\u0438\u043A\u0438_\u0434\u0435\u043A\u0430\u0431\u0440\u044C 2025\\Noa 2025\\Codium_test_2404\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T13:21:27.815Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
